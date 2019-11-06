@@ -1,0 +1,4 @@
+[submodule "tests/libft"]
+	path = tests/libft
+	url = git@github.com:tmaraval/libft.git
+	branch = master
