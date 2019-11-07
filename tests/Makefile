@@ -8,6 +8,7 @@ CFLAGS =  -g3 -Wall -Werror -Wextra
 OBJ_PATH =  obj
 
 SRCS =  test_ft_bzero.c \
+		test_ft_strcat.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
@@ -16,7 +17,7 @@ SRC = $(SRCS)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -ldl ../libfts.a 
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) ../libfts.a 
 
 $(OBJ): $(OBJ_PATH)/%.o : %.c
 	mkdir -p $(dir $@)
