@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
+/*   test_ft_isdigit.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:38:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/07 16:02:59 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:03:29 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void	test_ft_isalpha_2_false(void)
+void	test_ft_isdigit_2_false(void)
 {
 	printf(" [*] test on : %s\n", __FUNCTION__);
-	assert(_ft_isalpha('\n') == isalpha('\n'));
-	assert(_ft_isalpha('\0') == isalpha('\0'));
-	assert(_ft_isalpha('[') == isalpha('['));
-	assert(_ft_isalpha('.') == isalpha('.'));
+	assert(_ft_isdigit('\n') == isdigit('\n'));
+	assert(_ft_isdigit('\0') == isdigit('\0'));
+	assert(_ft_isdigit('[') == isdigit('['));
+	assert(_ft_isdigit('.') == isdigit('.'));
+	assert(_ft_isdigit('a') == isdigit('a'));
+	assert(_ft_isdigit('Z') == isdigit('Z'));
 }
 
-void	test_ft_isalpha_1_true(void)
+void	test_ft_isdigit_1_true(void)
 {
 	printf(" [*] test on : %s\n", __FUNCTION__);
-	printf("%d ou %c\n", isalpha('B'), isalpha('B'));
-	assert(_ft_isalpha('B') == 1);
-	assert(_ft_isalpha('c') == 1);
-	assert(_ft_isalpha('o') == 1);
-	assert(_ft_isalpha('Z') == 1);
-	assert(_ft_isalpha('a') == 1);
-	assert(_ft_isalpha('z') == 1);
-	assert(_ft_isalpha('K') == 1);
-	assert(_ft_isalpha('n') == 1);
+	assert(_ft_isdigit('0') == 1);
+	assert(_ft_isdigit('1') == 1);
+	assert(_ft_isdigit('2') == 1);
+	assert(_ft_isdigit('3') == 1);
+	assert(_ft_isdigit('4') == 1);
+	assert(_ft_isdigit('5') == 1);
+	assert(_ft_isdigit('6') == 1);
+	assert(_ft_isdigit('7') == 1);
+	assert(_ft_isdigit('8') == 1);
+	assert(_ft_isdigit('9') == 1);
 
 }

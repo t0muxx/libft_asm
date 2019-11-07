@@ -10,6 +10,7 @@ OBJ_PATH =  obj
 SRCS =  test_ft_bzero.c \
 		test_ft_strcat.c \
 		test_ft_isalpha.c \
+		test_ft_isdigit.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
