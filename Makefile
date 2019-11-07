@@ -1,27 +1,39 @@
 NAME = libfts.a
 
+ifeq ($(HOSTTYPE),)
+	HOSTTYPE := $(shell uname -m)_$(shell uname -s)
+endif
+
+ifeq ($(HOSTTYPE),x86_64_Darwin)
+	FORMAT = macho64
+endif
+
+ifeq ($(HOSTTYPE),x86_64_Linux)
+	FORMAT = elf64
+endif
+
 #FLAG AND COMPILATOR#
-CC =		clang
-CFLAGS =  -g -Wall -Werror -Wextra
+CC =		nasm
+CFLAGS =  -g -Wall
 
 #PATH#
 OBJ_PATH =  obj
 SRC_PATH =  src
 
-SRCS = 
+SRCS =		ft_bzero.s 
 
-OBJ = $(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
+OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))
 
 all: $(NAME)
 
-$(NAME): $(OBJ) test
+$(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 $(OBJ): $(OBJ_PATH)/%.o : $(SRC_PATH)/%.s
 	mkdir -p $(dir $@)
-	$(CC) -o $@ $(CFLAGS) -c $<
+	$(CC) -f $(FORMAT) -o $@ $(CFLAGS) $<
 
 test:
 	@+$(MAKE) -C tests
