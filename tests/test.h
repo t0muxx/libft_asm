@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/07 15:08:44 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/07 15:44:09 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,7 @@ char	*_ft_strcat(const char *s1, const char *s2);
 void	test_ft_strcat_1_ok(void);
 void	test_ft_strcat_2_ko(void);
 void	test_ft_strcat_3_ko(void);
+
+int		_ft_isalpha(int c);
+void	test_ft_isalpha_1_true(void);
+void	test_ft_isalpha_2_false(void);
