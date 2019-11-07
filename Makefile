@@ -20,7 +20,8 @@ CFLAGS =  -g -Wall
 OBJ_PATH =  obj
 SRC_PATH =  src
 
-SRCS =		ft_bzero.s 
+SRCS =		ft_bzero.s \
+			ft_strcat.s
 
 OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))

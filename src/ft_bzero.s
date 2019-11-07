@@ -7,13 +7,12 @@ _ft_bzero:
 	mov rcx, rsi
 
 loop:
+	cmp rcx, 0
+	jle end
 	mov byte [rbx], 0
 	inc rbx
 	dec rcx
-	cmp rcx, 0
-	je end
 	jmp loop
-
 
 end:
 	ret
