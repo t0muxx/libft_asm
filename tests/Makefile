@@ -1,36 +1,35 @@
 NAME =	tests.bin
 
 #FLAG AND COMPILATOR#
-CC =		clang
-CFLAGS =  -g -Wall -Werror -Wextra
+CC =		gcc
+CFLAGS =  -g3 -Wall -Werror -Wextra
 
 #PATH#
 OBJ_PATH =  obj
-SRC_PATH =  src
-INC_PATH := inc
 
-SRCS = 
+SRCS =  test_ft_bzero.c \
+		main.c
 
-OBJ = $(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
-SRC = $(addprefix $(SRC_PATH)/,$(SRCS))
+OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
+SRC = $(SRCS)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@+$(MAKE) -C libft/
-	$(CC) $(CFLAGS) -I$(INC_PATH) $(OBJ) libft/libft.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -ldl ../libfts.a 
 
-$(OBJ): $(OBJ_PATH)/%.o : $(SRC_PATH)/%.c
+$(OBJ): $(OBJ_PATH)/%.o : %.c
 	mkdir -p $(dir $@)
-	$(CC) -o $@ $(CFLAGS) -I$(INC_PATH) -c $<
+	$(CC) -o $@ $(CFLAGS) -c $<
+
+test:
+	@+ make -C tests/
 
 clean:
 	/bin/rm -rf $(OBJ_PATH)
-	(cd libft ; make clean)
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	/bin/rm -f libft/libft.a
 
 re: fclean all
 
