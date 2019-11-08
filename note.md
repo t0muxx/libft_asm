@@ -12,10 +12,12 @@
 •toupper
 •tolower
 •puts
+-> function spec
 •strlen
 •memset
 •memcpy
 •strdup
+*cat
 
 Ordre des args:
 RDI, RSI, RDX, RCX, R8, R9

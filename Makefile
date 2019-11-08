@@ -24,7 +24,8 @@ SRCS =		ft_bzero.s \
 			ft_strcat.s \
 			ft_isalpha.s \
 			ft_isdigit.s \
-			ft_isalnum.s
+			ft_isalnum.s \
+			ft_isascii.s
 
 OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))
