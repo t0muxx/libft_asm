@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 09:08:05 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 10:16:49 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <fcntl.h>
 
 void	_ft_bzero(void *mem, size_t n);
 void	test_ft_bzero_1_ok(void);
@@ -52,3 +53,8 @@ void	test_ft_toupper_all(void);
 
 int		_ft_tolower(int c);
 void	test_ft_tolower_all(void);
+
+int		_ft_puts(const char *s);
+void	test_ft_puts_ok(void);
+void	test_ft_puts_emtpy(void);
+void	test_ft_puts_null(void);
