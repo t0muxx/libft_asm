@@ -32,7 +32,8 @@ SRCS =		ft_bzero.s \
 			ft_puts.s \
 			ft_strlen.s \
 			ft_memset.s \
-			ft_memcpy.s
+			ft_memcpy.s \
+			ft_strdup.s
 
 OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))
@@ -41,7 +42,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+#	ranlib $(NAME)
 
 $(OBJ): $(OBJ_PATH)/%.o : $(SRC_PATH)/%.s
 	mkdir -p $(dir $@)
