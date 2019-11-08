@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/07 15:59:21 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 08:27:57 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,7 @@ void	test_ft_isalpha_2_false(void);
 int		_ft_isdigit(int c);
 void	test_ft_isdigit_1_true(void);
 void	test_ft_isdigit_2_false(void);
+
+int		_ft_isalnum(int c);
+void	test_ft_isalnum_1_true(void);
+void	test_ft_isalnum_2_false(void);

@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:29 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/07 15:58:31 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 08:28:33 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		run_tests(void (*tests[])(void))
 
 int		main(void)
 {
-	void	(*tests[12])(void);
+	void	(*tests[14])(void);
 
 	tests[0] = &test_ft_bzero_1_ok;
 	tests[1] = &test_ft_bzero_2_ok;
@@ -42,7 +42,9 @@ int		main(void)
 	tests[8] = &test_ft_isalpha_2_false;
 	tests[9] = &test_ft_isdigit_1_true;
 	tests[10] = &test_ft_isdigit_2_false;
-	tests[11] = 0;
+	tests[11] = &test_ft_isalnum_1_true;
+	tests[12] = &test_ft_isalnum_2_false;
+	tests[13] = 0;
 	run_tests(tests);
 	return (0);
 }

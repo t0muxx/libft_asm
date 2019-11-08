@@ -11,6 +11,7 @@ SRCS =  test_ft_bzero.c \
 		test_ft_strcat.c \
 		test_ft_isalpha.c \
 		test_ft_isdigit.c \
+		test_ft_isalnum.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
