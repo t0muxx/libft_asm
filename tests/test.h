@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 10:23:51 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 13:41:18 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,8 @@ int		ft_puts(const char *s);
 void	test_ft_puts_ok(void);
 void	test_ft_puts_emtpy(void);
 void	test_ft_puts_null(void);
+
+size_t	ft_strlen(const char *s);
+void	test_ft_strlen_1(void);
+void	test_ft_strlen_2_empty(void);
+void	test_ft_strlen_3_null(void);
