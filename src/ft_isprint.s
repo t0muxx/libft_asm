@@ -1,8 +1,14 @@
-global _ft_isprint
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_isprint
+%else
+	%define NAME _ft_isprint
+%endif
+
+global NAME 
 
 section .text
 
-_ft_isprint:
+NAME:
 	cmp rdi, 0x20
 	jl false
 	cmp rdi, 0x7e

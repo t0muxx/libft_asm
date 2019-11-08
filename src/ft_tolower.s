@@ -1,8 +1,14 @@
-global _ft_tolower
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_tolower
+%else
+	%define NAME _ft_tolower
+%endif
+
+global NAME 
 
 section .text
 
-_ft_tolower:
+NAME:
 	cmp rdi, 0x41
 	jl false
 	cmp rdi, 0x5a

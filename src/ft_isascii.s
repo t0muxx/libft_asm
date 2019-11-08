@@ -1,8 +1,14 @@
-global _ft_isascii
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_isascii
+%else
+	%define NAME _ft_isascii
+%endif
+
+global NAME 
 
 section .text
 
-_ft_isascii:
+NAME:
 	cmp rdi, 0x00
 	jl false
 	cmp rdi, 0x7f

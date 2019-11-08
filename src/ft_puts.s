@@ -1,8 +1,14 @@
-global	_ft_puts
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_puts
+%else
+	%define NAME _ft_puts
+%endif
+
+global NAME 
 
 section .text
 
-_ft_puts:
+NAME:
 	xor rcx, rcx
 
 check_len:

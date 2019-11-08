@@ -1,8 +1,14 @@
-global	_ft_bzero
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_bzero
+%else
+	%define NAME _ft_bzero
+%endif
+
+global	NAME
 
 section .text
 
-_ft_bzero:
+NAME:
 	mov	rbx, rdi
 	mov rcx, rsi
 

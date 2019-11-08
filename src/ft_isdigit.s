@@ -1,8 +1,14 @@
-global _ft_isdigit
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_isdigit
+%else
+	%define NAME _ft_isdigit
+%endif
+
+global NAME 
 
 section .text
 
-_ft_isdigit:
+NAME:
 	cmp rdi, 0x30
 	jl false
 	cmp rdi, 0x39

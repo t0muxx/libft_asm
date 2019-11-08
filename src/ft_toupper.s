@@ -1,8 +1,14 @@
-global _ft_toupper
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_toupper
+%else
+	%define NAME _ft_toupper
+%endif
+
+global NAME 
 
 section .text
 
-_ft_toupper:
+NAME:
 	cmp rdi, 0x61
 	jl false
 	cmp rdi, 0x7a

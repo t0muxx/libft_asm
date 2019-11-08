@@ -1,8 +1,14 @@
-global _ft_strcat
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_strcat
+%else
+	%define NAME _ft_strcat
+%endif
+
+global NAME 
 
 section .text
 	
-_ft_strcat:
+NAME:
 	mov rax, rdi
 	cmp rdi, 0
 	je end

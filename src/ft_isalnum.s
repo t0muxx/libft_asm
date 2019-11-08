@@ -1,8 +1,14 @@
-global _ft_isalnum
+%ifidn __OUTPUT_FORMAT__, elf64
+	%define NAME ft_isalnum
+%else
+	%define NAME _ft_isalnum
+%endif
+
+global NAME 
 
 section .text
 
-_ft_isalnum:
+NAME:
 	cmp rdi, 0x30
 	jl false
 	cmp rdi, 0x39
