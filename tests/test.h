@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 14:30:02 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 14:46:01 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,3 +68,6 @@ void	*ft_memset(void *s, int c, size_t n);
 void	test_ft_memset_1(void);
 void	test_ft_memset_2(void);
 void	test_ft_memset_len_0(void);
+
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	test_ft_memcpy_1(void);

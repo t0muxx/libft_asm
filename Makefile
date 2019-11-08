@@ -31,7 +31,8 @@ SRCS =		ft_bzero.s \
 			ft_tolower.s \
 			ft_puts.s \
 			ft_strlen.s \
-			ft_memset.s
+			ft_memset.s \
+			ft_memcpy.s
 
 OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))
