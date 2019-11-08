@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 15:12:44 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 16:25:04 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,6 @@ void	test_ft_memcpy_1(void);
 
 char	*ft_strdup(const char *s);
 void	test_ft_strdup_1(void);
+
+void	ft_cat(int fd);
+void	test_ft_cat(void);
