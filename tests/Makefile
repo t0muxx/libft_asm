@@ -14,6 +14,8 @@ SRCS =  test_ft_bzero.c \
 		test_ft_isalnum.c \
 		test_ft_isascii.c \
 		test_ft_isprint.c \
+		test_ft_toupper.c \
+		test_ft_tolower.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)

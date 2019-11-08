@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 08:54:31 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 09:08:05 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,9 @@ void	test_ft_isascii_2_false(void);
 int		_ft_isprint(int c);
 void	test_ft_isprint_1_true(void);
 void	test_ft_isprint_2_false(void);
+
+int		_ft_toupper(int c);
+void	test_ft_toupper_all(void);
+
+int		_ft_tolower(int c);
+void	test_ft_tolower_all(void);
