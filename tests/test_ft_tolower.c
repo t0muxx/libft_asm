@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 09:01:50 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 09:07:41 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 10:25:42 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	test_ft_tolower_all(void)
 	printf(" [*] test on : %s\n", __FUNCTION__);
 	while (i < 260)
 	{
-		assert(_ft_tolower(i) == tolower(i));
+		assert(ft_tolower(i) == tolower(i));
 		i++;
 	}
 

@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 09:01:50 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 09:03:13 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/08 10:25:46 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	test_ft_toupper_all(void)
 	printf(" [*] test on : %s\n", __FUNCTION__);
 	while (i < 260)
 	{
-		assert(_ft_toupper(i) == toupper(i));
+		assert(ft_toupper(i) == toupper(i));
 		i++;
 	}
 
