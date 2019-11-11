@@ -24,6 +24,8 @@ ft_strcmp
 ft_strncmp
 ft_puts_fd
 ft_atoi
+ft_strsub
+ft_shellcode
 
 Ordre des args:
 RDI, RSI, RDX, RCX, R8, R9
