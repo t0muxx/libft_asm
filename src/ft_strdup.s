@@ -27,16 +27,14 @@ NAME:
 allocate:
 	mov rdi, rcx
 	inc rdi
-	xor rsi, rsi
-	mov rsi, rdi
+	mov r9, rdi
 	call MALLOC PLT
 	cmp rax, 0
 	je false
 	
 copy:
-	mov rcx, rsi
-	xor rsi, rsi
 	mov rdi, rax
+	mov rcx, r9
 	pop rsi
 	cld
 	rep movsb
