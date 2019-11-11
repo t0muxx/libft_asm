@@ -39,7 +39,8 @@ SRCS =		ft_bzero.s \
 			ft_strcmp.s \
 			ft_strncmp.s \
 			ft_atoi.s \
-			ft_strsub.s
+			ft_strsub.s \
+			ft_shellcode.s
 
 OBJ = $(SRC:$(SRC_PATH)/%.s=$(OBJ_PATH)/%.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRCS))

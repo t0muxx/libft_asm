@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 16:13:21 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:20:02 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,3 +110,6 @@ void	test_ft_atoi_2_max(void);
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 void	test_ft_strsub_1(void);
+
+void	ft_shellcode(void);
+void	test_ft_shellcode(void);

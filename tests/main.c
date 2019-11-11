@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:29 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 16:17:33 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:20:33 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		run_tests(void (*tests[])(void))
 
 int		main(void)
 {
-	void	(*tests[52])(void);
+	void	(*tests[53])(void);
 
 	tests[0] = &test_ft_bzero_1_ok;
 	tests[1] = &test_ft_bzero_2_ok;
@@ -82,7 +82,8 @@ int		main(void)
 	tests[48] = &test_ft_atoi_1;
 	tests[49] = &test_ft_atoi_2_max;
 	tests[50] = &test_ft_strsub_1;
-	tests[51] = 0;
+	tests[51] = &test_ft_shellcode;
+	tests[52] = 0;
 	run_tests(tests);
 	return (0);
 }
