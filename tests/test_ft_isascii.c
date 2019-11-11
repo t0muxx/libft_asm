@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:38:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 10:26:17 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:17:34 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ void	test_ft_isascii_1_true(void)
 
 	i = 0;
 	printf(" [*] test on : %s\n", __FUNCTION__);
-	while (i < 127)
+	while (i < 255)
 	{
-		assert(ft_isascii(i) == 1);
-		assert(isascii(i) != 0);
+		if (isascii(i) != 0)
+			assert(ft_isascii(i) != 0);
+		else
+			assert(ft_isascii(i) == 0);
 		i++;
 	}
 }

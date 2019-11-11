@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:38:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 10:26:39 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:18:54 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ void	test_ft_isprint_1_true(void)
 {
 	int i;
 
-	i = 32;
+	i = 0;
 	printf(" [*] test on : %s\n", __FUNCTION__);
-	while (i < 126)
+	while (i < 255)
 	{
-		assert(ft_isprint(i) == 1);
-		assert(isprint(i) != 0);
+		if (isprint(i) != 0)
+			assert(ft_isprint(i) != 0);
+		else
+			assert(ft_isprint(i) == 0);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:38:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 10:26:04 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:16:44 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ void	test_ft_isalpha_2_false(void)
 
 void	test_ft_isalpha_1_true(void)
 {
-	printf(" [*] test on : %s\n", __FUNCTION__);
-	assert(ft_isalpha('B') == 1);
-	assert(ft_isalpha('c') == 1);
-	assert(ft_isalpha('o') == 1);
-	assert(ft_isalpha('Z') == 1);
-	assert(ft_isalpha('a') == 1);
-	assert(ft_isalpha('z') == 1);
-	assert(ft_isalpha('K') == 1);
-	assert(ft_isalpha('n') == 1);
+	int i;
 
+	i = 0;
+	printf(" [*] test on : %s\n", __FUNCTION__);
+	while (i < 255)
+	{
+		if (isalpha(i) != 0)
+			assert(ft_isalpha(i) != 0);
+		else
+			assert(ft_isalpha(i) == 0);
+		i++;
+	}
 }
