@@ -48,7 +48,6 @@ loop:
 add_backslash:
 	mov bl, 0
 	mov [rax+r9], bl
-	mov rax, rdi
 
 end:
 	leave
