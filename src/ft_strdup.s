@@ -17,7 +17,7 @@ NAME:
 	mov rbp, rsp
 	sub rsp, 16
 	push rdi ; saved source
-	xor al, al
+	xor rax, rax
 	cld
 	mov rcx, -1
 	repne scasb
@@ -26,12 +26,16 @@ NAME:
 
 allocate:
 	mov rdi, rcx
+	inc rdi
+	xor rsi, rsi
+	mov rsi, rdi
 	call MALLOC PLT
 	cmp rax, 0
 	je false
 	
 copy:
-	mov rcx, rdx
+	mov rcx, rsi
+	xor rsi, rsi
 	mov rdi, rax
 	pop rsi
 	cld

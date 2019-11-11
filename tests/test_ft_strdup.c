@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:43:36 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 15:45:29 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 07:20:45 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,6 @@ void	test_ft_strdup_1(void)
 		assert(s2[i] == s3[i]);
 		i++;
 	}
+	free(s2);
+	free(s3);
 }
