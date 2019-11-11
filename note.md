@@ -20,7 +20,9 @@
 *cat
 
 --> bonus :
-strcmp
+ft_strcmp
+ft_strncmp
+ft_puts_fd
 
 Ordre des args:
 RDI, RSI, RDX, RCX, R8, R9

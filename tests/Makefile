@@ -17,12 +17,14 @@ SRCS =  test_ft_bzero.c \
 		test_ft_toupper.c \
 		test_ft_tolower.c \
 		test_ft_puts.c \
+		test_ft_puts_fd.c \
 		test_ft_strlen.c \
 		test_ft_memset.c \
 		test_ft_memcpy.c \
 		test_ft_strdup.c \
 		test_ft_cat.c \
 		test_ft_strcmp.c \
+		test_ft_strncmp.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)

@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 10:36:10 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 11:16:34 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ void	test_ft_puts_ok(void);
 void	test_ft_puts_emtpy(void);
 void	test_ft_puts_null(void);
 
+int		ft_puts_fd(const char *s, int fd);
+void	test_ft_puts_fd_ok(void);
+void	test_ft_puts_fd_file(void);
+void	test_ft_puts_fd_null(void);
+
 size_t	ft_strlen(const char *s);
 void	test_ft_strlen_1(void);
 void	test_ft_strlen_2_empty(void);
@@ -89,3 +94,11 @@ void	test_ft_strcmp_2(void);
 void	test_ft_strcmp_3(void);
 void	test_ft_strcmp_4(void);
 void	test_ft_strcmp_5(void);
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	test_ft_strncmp_1(void);
+void	test_ft_strncmp_2(void);
+void	test_ft_strncmp_3(void);
+void	test_ft_strncmp_4(void);
+void	test_ft_strncmp_5(void);
+
