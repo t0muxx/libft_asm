@@ -6,11 +6,35 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:43:36 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 07:47:02 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:36:05 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+void	test_ft_strdup_2(void)
+{
+	char s1[340];
+	char *s2;
+	char *s3;
+	int i;
+
+	printf(" [*] test on : %s\n", __FUNCTION__);
+	i = 0;
+	memset(s1, 0, 340);
+	memcpy(s1, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", 340);
+	s2 = strdup(s1);
+	s3 = ft_strdup(s1);
+	assert(s2 != NULL);
+	assert(s3 != NULL);
+	while (i < 340)
+	{
+		assert(s2[i] == s3[i]);
+		i++;
+	}
+	free(s2);
+	free(s3);
+}
 
 void	test_ft_strdup_1(void)
 {

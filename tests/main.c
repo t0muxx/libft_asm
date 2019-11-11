@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:29 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 10:24:07 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:36:43 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		run_tests(void (*tests[])(void))
 
 int		main(void)
 {
-	void	(*tests[39])(void);
+	void	(*tests[41])(void);
 
 	tests[0] = &test_ft_bzero_1_ok;
 	tests[1] = &test_ft_bzero_2_ok;
@@ -60,16 +60,18 @@ int		main(void)
 	tests[26] = &test_ft_memset_2;
 	tests[27] = &test_ft_memset_len_0;
 	tests[28] = &test_ft_memcpy_1;
-	tests[29] = &test_ft_strdup_1;
-	tests[30] = &test_ft_cat;
-	tests[31] = &test_ft_cat_closed_fd;
-	tests[32] = &test_ft_cat_closed_0;
-	tests[33] = &test_ft_strcmp_1;
-	tests[34] = &test_ft_strcmp_2;
-	tests[35] = &test_ft_strcmp_3;
-	tests[36] = &test_ft_strcmp_4;
-	tests[37] = &test_ft_strcmp_5;
-	tests[38] = 0;
+	tests[29] = &test_ft_memcpy_2;
+	tests[30] = &test_ft_strdup_1;
+	tests[31] = &test_ft_strdup_2;
+	tests[32] = &test_ft_cat;
+	tests[33] = &test_ft_cat_closed_fd;
+	tests[34] = &test_ft_cat_closed_0;
+	tests[35] = &test_ft_strcmp_1;
+	tests[36] = &test_ft_strcmp_2;
+	tests[37] = &test_ft_strcmp_3;
+	tests[38] = &test_ft_strcmp_4;
+	tests[39] = &test_ft_strcmp_5;
+	tests[40] = 0;
 	run_tests(tests);
 	return (0);
 }
