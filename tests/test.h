@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 11:16:34 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 15:06:36 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <ctype.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <limits.h>
+#include <time.h>
 
 void	ft_bzero(void *mem, size_t n);
 void	test_ft_bzero_1_ok(void);
@@ -102,3 +104,6 @@ void	test_ft_strncmp_3(void);
 void	test_ft_strncmp_4(void);
 void	test_ft_strncmp_5(void);
 
+int		ft_atoi(char *s);
+void	test_ft_atoi_1(void);
+void	test_ft_atoi_2_max(void);
