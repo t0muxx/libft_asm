@@ -19,5 +19,8 @@
 •strdup
 *cat
 
+--> bonus :
+strcmp
+
 Ordre des args:
 RDI, RSI, RDX, RCX, R8, R9
