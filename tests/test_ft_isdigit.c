@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:38:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/08 10:26:29 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:00:43 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	test_ft_isdigit_2_false(void)
 void	test_ft_isdigit_1_true(void)
 {
 	printf(" [*] test on : %s\n", __FUNCTION__);
+	printf("--> %d\n", isdigit('0'));
 	assert(ft_isdigit('0') == 1);
 	assert(ft_isdigit('1') == 1);
 	assert(ft_isdigit('2') == 1);
