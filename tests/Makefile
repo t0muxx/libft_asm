@@ -26,6 +26,7 @@ SRCS =  test_ft_bzero.c \
 		test_ft_strcmp.c \
 		test_ft_strncmp.c \
 		test_ft_atoi.c \
+		test_ft_strsub.c \
 		main.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
