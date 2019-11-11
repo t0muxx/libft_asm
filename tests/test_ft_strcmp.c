@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 11:20:08 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 08:10:13 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/11 10:41:49 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@ void	test_ft_strcmp_4(void)
 	char str2[10];
 	int  ret1;
 	int	ret2;
+	char *save;
 
 	strcpy(str1, "");
 	strcpy(str2, "");
+	save = str2;
 	printf(" [*] test on : %s\n", __FUNCTION__);
 	ret1 = strcmp(str1, str2);
 	ret2 =  ft_strcmp(str1, str2);
+	assert(save == str2);
 	assert(ret1 == ret2);
 }
 
