@@ -4,9 +4,8 @@
 	%define NAME _ft_strlen
 %endif
 
-global	NAME
-
 section .text
+global	NAME
 
 NAME:
 	xor al, al

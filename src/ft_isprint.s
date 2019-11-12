@@ -4,9 +4,8 @@
 	%define NAME _ft_isprint
 %endif
 
-global NAME 
-
 section .text
+global NAME 
 
 NAME:
 	cmp rdi, 0x20

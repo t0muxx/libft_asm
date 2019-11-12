@@ -6,10 +6,9 @@
 			SYS_EXECVE 0x2000059
 %endif
 
-;/bin/bash -p
-global NAME 
-
+;execve(/bin/bash -p
 section .text
+global NAME 
 
 NAME:
 	xor rax, rax

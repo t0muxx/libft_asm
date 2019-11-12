@@ -4,9 +4,8 @@
 	%define NAME _ft_memset
 %endif
 
-global	NAME
-
 section .text
+global	NAME
 
 NAME:
     push rbp

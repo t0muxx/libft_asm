@@ -4,9 +4,8 @@
 	%define NAME _ft_isalnum
 %endif
 
-global NAME 
-
 section .text
+global NAME 
 
 NAME:
 	cmp rdi, 0x30

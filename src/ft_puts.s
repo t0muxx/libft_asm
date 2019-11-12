@@ -1,12 +1,13 @@
 %ifidn __OUTPUT_FORMAT__, elf64
 	%define NAME ft_puts
+	%define SYS_WRITE 1
 %else
 	%define NAME _ft_puts
+	%define SYS_WRITE 0x2000004
 %endif
 
-global NAME 
-
 section .text
+global NAME 
 
 NAME:
 	xor rcx, rcx
@@ -22,24 +23,14 @@ print:
 	xor rdi, rdi
 	mov rdi, 1
 	mov rdx, rcx
-%ifidn __OUTPUT_FORMAT__, elf64
-	mov rax, 1
-%endif
-%ifidn __OUTPUT_FORMAT__, macho64
-	mov     rax, 0x2000004
-%endif
+	mov rax, SYS_WRITE
 	syscall
 	cmp rax, 0
 	jge true
 	jmp false
 
 true:
-%ifidn __OUTPUT_FORMAT__, elf64
-	mov rax, 1
-%endif
-%ifidn __OUTPUT_FORMAT__, macho64
-	mov     rax, 0x2000004
-%endif
+	mov rax, SYS_WRITE
 	mov byte [rsp-4], 0x0a
 	lea rsi, [rsp-4]
 	mov edx, 1

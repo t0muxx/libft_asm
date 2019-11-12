@@ -4,9 +4,8 @@
 	%define NAME _ft_tolower
 %endif
 
-global NAME 
-
 section .text
+global NAME 
 
 NAME:
 	cmp rdi, 0x41

@@ -4,10 +4,9 @@
 	%define NAME _ft_strcat
 %endif
 
+section .text
 global NAME 
 
-section .text
-	
 NAME:
 	mov rax, rdi
 	cmp rdi, 0

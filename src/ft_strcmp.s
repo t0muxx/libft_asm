@@ -4,9 +4,8 @@
 	%define NAME _ft_strcmp
 %endif
 
-global	NAME
-
 section .text
+global	NAME
 
 NAME:
 	xor rcx, rcx

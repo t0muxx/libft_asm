@@ -4,9 +4,8 @@
 	%define NAME _ft_atoi
 %endif
 
-global	NAME
-
 section .text
+global	NAME
 
 NAME:
 	push rbp

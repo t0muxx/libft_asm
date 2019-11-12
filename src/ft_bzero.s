@@ -4,9 +4,8 @@
 	%define NAME _ft_bzero
 %endif
 
-global	NAME
-
 section .text
+global	NAME
 
 NAME:
 	mov	rbx, rdi
