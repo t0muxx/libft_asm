@@ -15,9 +15,10 @@ extern	MALLOC
 NAME:
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
+	sub rsp, 32
 	push rdi ; saved source
 	xor rax, rax
+	push rax
 	cld
 	mov rcx, -1
 	repne scasb
@@ -27,14 +28,18 @@ NAME:
 allocate:
 	mov rdi, rcx
 	inc rdi
-	mov r9, rdi
+	push rdi
+	xor rax, rax
+	push rax
 	call MALLOC PLT
 	cmp rax, 0
 	je false
 	
 copy:
 	mov rdi, rax
-	mov rcx, r9
+	pop rcx
+	pop rcx
+	pop rsi
 	pop rsi
 	cld
 	rep movsb

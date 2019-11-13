@@ -8,6 +8,8 @@
 	%define NAME _ft_cat
 	%define PLT
 	%define MEMSET _memset
+	%define SYS_READ 0x2000003
+	%define SYS_WRITE 0x2000004
 %endif
 
 section .text
@@ -33,6 +35,7 @@ read_loop:
 	mov r8, rax
 	cmp rax, 0
 	jle end
+	jnc end
 	jmp print
 
 print:

