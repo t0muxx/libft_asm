@@ -37,6 +37,7 @@ true:
 	syscall
 	cmp rax, 0
 	jle false
+	mov rax, 0xa
 	ret
 
 false:

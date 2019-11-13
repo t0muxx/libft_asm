@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 12:10:14 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/11 15:10:11 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/13 14:29:46 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,16 @@ void	test_ft_atoi_1(void)
 	char *str;
 	int	j;
 
+	printf(" [*] test on : %s\n", __FUNCTION__);
 	j = 0;
 	srand(time(NULL));
 	i = 0;
 	str = malloc(1000);
+	sprintf(str, "");
+	printf("testing with |%s|\n", str);
+	ret1 = atoi(str);
+	ret2 = ft_atoi(str);
+	assert(ret1 == ret2);
 	while (i < 200)
 	{
 		j = rand();

@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 16:24:03 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/13 11:20:11 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/13 16:32:39 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ void	test_ft_cat(void)
 	fd = 0;
 	printf(" [*] test on : %s\n", __FUNCTION__);
 	fd = open("./test_ft_cat.c", O_RDONLY);
+	if (fd < 0)
+	{
+		printf("errrr\n");
+		return ;
+	}
 	ft_cat(fd);
 	close(fd);
 }

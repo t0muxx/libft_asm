@@ -22,7 +22,7 @@ loop_s1:
 
 loop_cat:
 	cmp byte [rsi], 0
-	je end
+	je end_cat
 	mov cl, byte [rsi]
 	mov	byte [rdi], cl
 	inc rsi
