@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/14 09:19:40 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/14 11:00:46 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,13 @@ size_t	ft_strlen(const char *s);
 void	test_ft_strlen(void);
 
 void	*ft_memset(void *s, int c, size_t n);
-void	test_ft_memset_1(void);
-void	test_ft_memset_2(void);
-void	test_ft_memset_len_0(void);
+void	test_ft_memset(void);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	test_ft_memcpy_1(void);
-void	test_ft_memcpy_2(void);
+void	test_ft_memcpy(void);
 
 char	*ft_strdup(const char *s);
-void	test_ft_strdup_1(void);
-void	test_ft_strdup_2(void);
+void	test_ft_strdup(void);
 
 void	ft_cat(int fd);
 void	test_ft_cat(void);
@@ -87,22 +83,13 @@ void	test_ft_cat_closed_fd(void);
 void	test_ft_cat_closed_0(void);
 
 int		ft_strcmp(const char *s1, const char *s2);
-void	test_ft_strcmp_1(void);
-void	test_ft_strcmp_2(void);
-void	test_ft_strcmp_3(void);
-void	test_ft_strcmp_4(void);
-void	test_ft_strcmp_5(void);
+void	test_ft_strcmp(void);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	test_ft_strncmp_1(void);
-void	test_ft_strncmp_2(void);
-void	test_ft_strncmp_3(void);
-void	test_ft_strncmp_4(void);
-void	test_ft_strncmp_5(void);
+void	test_ft_strncmp(void);
 
 int		ft_atoi(char *s);
-void	test_ft_atoi_1(void);
-void	test_ft_atoi_2_max(void);
+void	test_ft_atoi(void);
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 void	test_ft_strsub_1(void);
