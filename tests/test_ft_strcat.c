@@ -6,71 +6,47 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 14:21:03 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/13 14:10:59 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/14 09:15:37 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void	test_ft_strcat_random(void)
+void	test_ft_strcat(void)
 {
-	char	ft_s1[200];
-	char	s1[200];
-	char	s2[200];
-	char	*ret;
+	char *src;
+	char *destft;
+	char *destcat;
+	char *rd;
+	int i;
+	int size;
 
+	i = 0;
 	printf(" [*] test on : %s\n", __FUNCTION__);
-	memset(ft_s1, 1, 200);
-	memset(s1, 1, 200);
-	memset(s2, 1, 200);
-	strcpy(s1, "s)8G_DGkms");
-	strcpy(ft_s1, "s)8G_DGkms");
-	strcpy(s2, "-5(wqDvFGAg3lIlZxmw3ofnec(83+-KWdigai");
-	ret = ft_strcat(ft_s1, s2);
-	strcat(s1, s2);
-	assert(ret != 0);
-	printf("strcat : |%s| vs ft_strcat : |%s|\n", s1, ft_s1);
-	assert(memcmp(ft_s1, s1, 200) == 0);
-	
-}
-
-void	test_ft_strcat_3_ko(void)
-{
-	char	s1[16];
-	char	s2[8];
-	char	*ret;
-
-	printf(" [*] test on : %s\n", __FUNCTION__);
-	strcpy(s1, "12345678");
-	strcpy(s2, "abcdef");
-	ret = ft_strcat(0, s2);
-	assert(ret == 0);
-}
-
-void	test_ft_strcat_2_ko(void)
-{
-	char	s1[16];
-	char	s2[8];
-	char	*ret;
-
-	printf(" [*] test on : %s\n", __FUNCTION__);
-	strcpy(s1, "12345678");
-	strcpy(s2, "abcdef");
-	ret = ft_strcat(s1, 0);
-	assert(strcmp(s1, "12345678") == 0);
-	assert(ret == s1);
-}
-
-void	test_ft_strcat_1_ok(void)
-{
-	char	s1[16];
-	char	s2[8];
-	char	*ret;
-
-	printf(" [*] test on : %s\n", __FUNCTION__);
-	strcpy(s1, "12345678");
-	strcpy(s2, "abcdef");
-	ret = ft_strcat(s1, s2);
-	assert(strcmp(s1, "12345678abcdef") == 0);
-	assert(ret == s1);
+	while (i < NTEST)
+	{
+		size = rand() % 800;
+		if (size < 0)
+			size = size * -1;
+		src = random_str(size);
+		rd = random_str(size / 2);
+		if (!(destft = (char *)malloc(size + (size / 2) + 1)))
+			return ;
+		if (!(destcat = (char *)malloc(size + (size / 2) + 1)))
+			return ;
+		memset(destft, 0, size + (size / 2) + 1);
+		memset(destcat, 0, size + (size / 2) + 1);
+		memcpy(destft, rd, size/2);
+		memcpy(destcat, rd, size/2);
+		assert(memcmp(destft, destcat, size/2) == 0);
+		printf("testing with |%s| |%s|\n", rd, src);
+		ft_strcat(destft, src);
+		strcat(destcat, src);
+		assert(memcmp(destft, destcat, size + (size / 2) + 1) == 0);
+		free(rd);
+		free(destft);
+		free(destcat);
+		free(src);
+		i++;
+	}
 }

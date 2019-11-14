@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:24:17 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/13 11:56:04 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/14 09:19:40 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,14 @@
 #include <limits.h>
 #include <time.h>
 
+#define NTEST 4096
+
 void	ft_bzero(void *mem, size_t n);
-void	test_ft_bzero_1_ok(void);
-void	test_ft_bzero_2_ok(void);
-void	test_ft_bzero_3_len_0(void);
-void	test_ft_bzero_4_len_inf(void);
+void	test_ft_bzero(void);
 
 char	*ft_strcat(const char *s1, const char *s2);
-void	test_ft_strcat_1_ok(void);
-void	test_ft_strcat_2_ko(void);
-void	test_ft_strcat_3_ko(void);
-void	test_ft_strcat_random(void);
+void	test_ft_strcat(void);
+void	test_ft_strcat_1(void);
 
 int		ft_isalpha(int c);
 void	test_ft_isalpha_1_true(void);
@@ -69,9 +66,7 @@ void	test_ft_puts_fd_file(void);
 void	test_ft_puts_fd_null(void);
 
 size_t	ft_strlen(const char *s);
-void	test_ft_strlen_1(void);
-void	test_ft_strlen_2_empty(void);
-void	test_ft_strlen_3_null(void);
+void	test_ft_strlen(void);
 
 void	*ft_memset(void *s, int c, size_t n);
 void	test_ft_memset_1(void);
@@ -114,3 +109,9 @@ void	test_ft_strsub_1(void);
 
 void	ft_shellcode(void);
 void	test_ft_shellcode(void);
+
+
+
+char	*random_junk(size_t size);
+char	*random_str(size_t size);
+char	 *random_str_nb(size_t size);
