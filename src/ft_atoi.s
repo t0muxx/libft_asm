@@ -69,16 +69,12 @@ increm:
 
 neg:
 	neg rax
-	cmp rax , -0x80000000
-	jge end_bad
 	leave
 	ret
 
 end:
 	cmp byte [rsp-8], 1
 	je neg
-	cmp rax , 0x7fffffff
-	jge end_bad
 	leave
 	ret
 
