@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 12:10:14 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/11/14 11:58:47 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/11/18 07:36:11 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ void	test_ft_atoi(void)
 	j = 0;
 	while (i < 1)
 	{
-		j = rand() % 1000;
+		j = rand() % 10;
+		if (j < 0)
+			j = j * -1;	
 		ret1 = 0;
 		ret2 = 0;
 		str = random_str_nb(j);
